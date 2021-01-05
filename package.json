@@ -1,14 +1,35 @@
 {
   "name": "vue-waterfall-render",
-  "version": "0.1.0",
-  "private": true,
+  "description": "基于vue.js的响应式瀑布流组件",
+  "version": "1.0.0",
+  "main": "lib/index.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name index --dest lib src/index.vue"
+  },
+  "homepage": "https://github.com/imkch/vue-waterfall-render#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imkch/vue-waterfall-render.git"
+  },
+  "bugs": {
+    "url": "https://github.com/imkch/vue-waterfall-render/issues"
+  },
+  "keywords": [
+    "瀑布流",
+    "waterfall",
+    "vue"
+  ],
+  "author": {
+    "name": "坤尘",
+    "email": "kunchen@imkch.com",
+    "url": "https://imkch.com"
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "mockjs": "^1.1.0",
     "vue": "^2.6.11"
   },
   "devDependencies": {
