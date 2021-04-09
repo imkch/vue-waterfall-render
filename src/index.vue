@@ -59,9 +59,14 @@ export default {
       const { dataList } = this;
       const widgetList = [];
       for (const item of dataList) {
-        item.imgHeight = 0;
         if (item.cover) {
-          item.imgHeight = await this.imgAsyncLoad(item.cover);
+          if (item.coverWidth && item.coverHeight) {
+            item.imgWidth = item.imgWidth || item.coverWidth;
+            item.imgHeight = item.imgHeight || item.coverHeight;
+            item.coverHeight = Math.round(this.columnWidth / (item.imgWidth / item.imgHeight));
+          } else {
+            await this.imgAsyncLoad(item.cover);
+          }
         }
         widgetList.push(item);
       }
@@ -107,7 +112,7 @@ export default {
       const { columnCount, columnWidth } = this.calcuCols();
       this.columnCount = columnCount;
       this.columnWidth = columnWidth;
-      this.renderWidgets();
+      this.preloadLoad();
     }
   }
 };
