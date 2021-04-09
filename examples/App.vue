@@ -51,7 +51,7 @@ export default {
         mockData.push({
           name: i + 1 + '、' + Random.ctitle(Math.ceil(Math.random() * 10)),
           describe: Random.cword(Math.ceil(Math.random() * 100)),
-          cover: Math.floor(Math.random() * 5) && `./static/images/${imgName}`,
+          cover: Math.floor(Math.random() * 5) && `./img/${imgName}`,
           coverWidth: this.imgSizeMap[imgName][0],
           coverHeight: this.imgSizeMap[imgName][1]
         });
