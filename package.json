@@ -1,7 +1,7 @@
 {
   "name": "vue-waterfall-render",
   "description": "基于vue.js的响应式瀑布流组件",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
